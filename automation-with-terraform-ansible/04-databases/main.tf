@@ -98,6 +98,7 @@ module "mysql" {
   instance_type          = "t2.micro"
   vpc_security_group_ids = [data.aws_ssm_parameter.mysql_sg_id.value]
   subnet_id              = local.database_subnet_ids
+  iam_instance_profile = "db-ansible-tf"
 
   tags = merge(
     var.common_tags,
@@ -144,6 +145,7 @@ module "rabbitmq" {
   instance_type          = "t2.micro"
   vpc_security_group_ids = [data.aws_ssm_parameter.rabbitmq_sg_id.value]
   subnet_id              = local.database_subnet_ids
+  iam_instance_profile = "db-ansible-tf"
 
   tags = merge(
     var.common_tags,
