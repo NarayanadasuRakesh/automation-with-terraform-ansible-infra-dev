@@ -1,0 +1,10 @@
+MONGODB_HOST: mongodb-dev.rakeshintech.online
+REDIS_HOST: redis-dev.rakeshintech.online
+MYSQL_HOST: mysql-dev.rakeshintech.online
+RABBITMQ_HOST: rabbitmq-dev.rakeshintech.online
+CATALOGUE_HOST: catalogue-dev.rakeshintech.online
+USER_HOST: user-dev.rakeshintech.online
+CART_HOST: cart-dev.rakeshintech.online
+SHIPPING_HOST: shipping-dev.rakeshintech.online
+PAYMENT_HOST: payment-dev.rakeshintech.online
+DISPATCH_HOST: dispatch-dev.rakeshintech.online
