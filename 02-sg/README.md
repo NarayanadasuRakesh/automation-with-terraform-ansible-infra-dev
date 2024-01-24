@@ -1,4 +1,4 @@
-- name: Roboshop SG and Rules
+- name: Robotshop SG and Rules
   security_groups:
   - DB:
     - mongodb
