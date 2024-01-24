@@ -17,7 +17,7 @@ variable "common_tags" {
   }
 }
 
-variable "zone_id" {
+variable "zone_name" {
   type = string
   default = "rakeshintech.online"
 }
