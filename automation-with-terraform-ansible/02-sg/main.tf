@@ -126,6 +126,15 @@ resource "aws_security_group_rule" "vpn" {
   cidr_blocks = [ "0.0.0.0/0" ]
 }
 
+resource "aws_security_group_rule" "app_alb_vpn" {
+  type                     = "ingress"
+  from_port                = 80
+  to_port                  = 80
+  protocol                 = "tcp"
+  security_group_id        = module.app_alb.sg_id
+  source_security_group_id = module.vpn.sg_id
+}
+
 resource "aws_security_group_rule" "mongodb_vpn" {
   type                     = "ingress"
   from_port                = 22
