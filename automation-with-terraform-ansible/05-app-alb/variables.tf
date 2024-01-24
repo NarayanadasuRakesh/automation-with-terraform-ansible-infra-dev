@@ -20,3 +20,8 @@ variable "tags" {
     Component = "app_alb"
   }
 }
+
+variable "zone_name" {
+  type = string
+  default = "rakeshintech.online"
+}
