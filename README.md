@@ -1,1 +1,0 @@
-# automation-with-terraform-ansible-V2
