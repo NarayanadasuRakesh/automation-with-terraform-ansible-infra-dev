@@ -17,7 +17,7 @@ variable "environment" {
 
 variable "tags" {
   default = {
-    Component = "app_alb"
+    Component = "app-alb"
   }
 }
 

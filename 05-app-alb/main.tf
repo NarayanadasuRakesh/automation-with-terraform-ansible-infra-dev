@@ -1,5 +1,5 @@
 resource "aws_lb" "app_alb" {
-  name               = "${local.name}-${var.tags.Component}" # robotshop-dev-app-alb
+  name               = "${local.name}-${var.tags.Component}"
   internal           = true
   load_balancer_type = "application"
   security_groups    = [data.aws_ssm_parameter.app_alb_sg_id.value]
@@ -35,7 +35,7 @@ module "records" {
   zone_name = var.zone_name
   records = [
     {
-      name    = "*.app-${var.environment}"
+      name    = "*.app-${var.environment}" # *.app-dev.domain.com
       type    = "A"
       alias   = {
         name    = aws_lb.app_alb.dns_name
