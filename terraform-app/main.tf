@@ -1,5 +1,5 @@
 resource "aws_lb_target_group" "component" {
-  name     = "${local.name}-${var.tags.Component}" # robotshop-dev-app-alb
+  name     = "${local.name}-${var.tags.Component}" # roboshop-dev-app-alb
   port     = 8080
   protocol = "HTTP"
   vpc_id   = var.vpc_id

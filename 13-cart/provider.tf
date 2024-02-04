@@ -6,10 +6,10 @@ terraform {
     }
   }
   backend "s3" {
-    bucket         = "robotshop-vpc-dev"
+    bucket         = "roboshop-terraform-dev"
     key            = "cart"
     region         = "us-east-1"
-    dynamodb_table = "robotshop-vpc-dev"
+    dynamodb_table = "roboshop-terraform-dev"
   }
 }
 
