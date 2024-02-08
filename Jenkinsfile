@@ -2,6 +2,9 @@ pipeline {
     agent {
         node { label 'node1' }
     }
+    options {
+        ansiColor('xterm')
+    }
     stages {
         stage('VPC') {
             steps {
