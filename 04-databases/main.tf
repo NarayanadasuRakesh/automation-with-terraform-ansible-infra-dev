@@ -38,6 +38,7 @@ resource "null_resource" "mongodb" {
   provisioner "remote-exec" {
     # Bootstrap script called with private_ip of each node in the inventory
     inline = [
+      "sed -i 's/\r//g' /tmp/bootstrap.sh",
       "chmod +x /tmp/bootstrap.sh",
       "sudo sh /tmp/bootstrap.sh mongodb dev"
     ]
@@ -84,6 +85,7 @@ resource "null_resource" "redis" {
   provisioner "remote-exec" {
     # Bootstrap script called with private_ip of each node in the inventory
     inline = [
+      "sed -i 's/\r//g' /tmp/bootstrap.sh",
       "chmod +x /tmp/bootstrap.sh",
       "sudo sh /tmp/bootstrap.sh redis dev"
     ]
@@ -131,6 +133,7 @@ resource "null_resource" "mysql" {
   provisioner "remote-exec" {
     # Bootstrap script called with private_ip of each node in the inventory
     inline = [
+      "sed -i 's/\r//g' /tmp/bootstrap.sh",
       "chmod +x /tmp/bootstrap.sh",
       "sudo sh /tmp/bootstrap.sh mysql dev"
     ]
@@ -178,6 +181,7 @@ resource "null_resource" "rabbitmq" {
   provisioner "remote-exec" {
     # Bootstrap script called with private_ip of each node in the inventory
     inline = [
+      "sed -i 's/\r//g' /tmp/bootstrap.sh",
       "chmod +x /tmp/bootstrap.sh",
       "sudo sh /tmp/bootstrap.sh rabbitmq dev"
     ]
