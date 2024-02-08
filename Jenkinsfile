@@ -60,12 +60,4 @@ pipeline {
             }
         }
     }
-    post {
-            success {
-                echo "Infra creation pipeline Success"
-            }
-            failure {
-                echo "Pipeline failed alert goes here"
-            }
-        }
 }
