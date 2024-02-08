@@ -22,7 +22,7 @@ pipeline {
             }
         }
         stage('VPN') {
-            stage {
+            steps {
                 sh '''
                     cd 03-vpn
                     terraform init -reconfigure
@@ -56,7 +56,8 @@ pipeline {
                 }
             }
         }
-        post {
+    }
+    post {
             success {
                 echo "Infra creation pipeline Success"
             }
@@ -64,5 +65,4 @@ pipeline {
                 echo "Pipeline failed alert goes here"
             }
         }
-    }
 }
